@@ -1,8 +1,8 @@
-import sys
+#import sys
 import argparse
-sys.path.append('C:/Users/phoen/OneDrive/Escritorio/pruebas_bp/carpeta_modulos/operations')
-from dogma import transcripcion, traduccion 
-from ids_seq import parseo
+#sys.path.append('C:/Users/phoen/OneDrive/Escritorio/pruebas_bp/carpeta_modulos/operations')
+from modulos.operations.dogma import transcripcion, traduccion 
+from modulos.operations.ids_seq import parseo
 
 parser = argparse.ArgumentParser(description="Lee archivo de entrada y salida")
 parser.add_argument("inputs_files", type=str, nargs='+', help="El archivo de texto que quieres procesar.")
