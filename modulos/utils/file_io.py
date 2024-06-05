@@ -19,7 +19,6 @@ Funciones:
 
 Imports: 
     none 
-
 """
 
 def read_dna_sequence(filename):

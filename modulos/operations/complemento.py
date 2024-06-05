@@ -1,5 +1,16 @@
-"""_summary_
-
+"""
+    Title: 
+        complemento.py
+        
+    Version: 1.2
+    
+    Usage: 
+        Python complemento.py
+    
+    Descripcion:
+        
+    Funciones:
+        
     Imports:
         none
 """
