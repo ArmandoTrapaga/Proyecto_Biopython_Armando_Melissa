@@ -1,35 +1,20 @@
 '''
-NAME 
+Title: 
+    Crear_frames    
 
-Creador de archivos frames
-
-VERSION
-        
-2.0
-
-AUTHOR
-
-Armando Gael Gonzalez Trapaga       
-
-DESCRIPTION
+Description
 
 Crea un total de 6 archivos evaluando un archivo fasta, donde cada archivo contiene los codones de sus secuencias 
 separados por espacios segun sea su marco de lectura
 
-CATEGORY
-
-Biología Computacional
-
-USAGE
-
-    % python crear_frames.py
+Usage
+    python crear_frames.py
 
 ARGUMENTS
 
 - archivo: La ruta del archivo que contiene la cadena de ADN a analizar.
 
-METHOD
-
+Metodo:
 1.- Se parsea el archivo fasta dado por el usario al llamar al programa
 2.- Se llama la funcion crear_frames con el archivo parseado y guardado en una variable 
 3.- La funcion hace un for para crear un archivo donde establece su titulo segun el marco de lectura  
@@ -39,32 +24,33 @@ METHOD
 '''
 #===========================================================================
 #=================================Imports===================================
-#from Bio.Seq import Seq
-#from Bio import SeqIO
 import re
 import argparse
-#import sys
-
-#sys.path.append('C:/Users/phoen/OneDrive/Escritorio/pruebas_bp/carpeta_modulos/operations')
+import sys
+sys.path.append('C:/Users/phoen/OneDrive/Escritorio/pruebas_bp/carpeta_modulos/operations')
 from modulos.operations.ids_seq import parseo
 #============================================================================
 
 # ===========================================================================
-# ================================Funtions===================================
+# ================================Functions===================================
 
+# Creamos un objeto ArgumentParser para manejar los argumentos de linea de comandos
 parser = argparse.ArgumentParser(description="Lee archivo de entrada y salida")
 
+# Agregamos un argumento obligatorio para el archivo de entrada
 parser.add_argument("input_file", type=str, help="El archivo de texto que quieres procesar.")
+# Agregamos un argumento opcional para los marcos de lectura
 parser.add_argument('-n', "--marcos", type=str, nargs="+",default="1", help="El marco de lectura que quieres conseguir")
 
+# Parseamos los argumentos proporcionados por el usuario
 args = parser.parse_args()
-#Asignamos el parseo a una variable del main
+
+# Asignamos el parseo a una variable del main
 archivo_seq = args.input_file
 
 marcos = [int(num) for num in args.marcos if int(num) <= 6 and int(num) >=1]
 
-
-#archivo_seq = "C:/Users/phoen/OneDrive/Escritorio/cursos_biopython/data/seq.nt.fa"
+# Definimos una clase para manejar los marcos de lectura
 class frames():
     def __init__(self,archivo, marcos):
         self.archivo = archivo
@@ -77,14 +63,17 @@ class frames():
                 #Se establece el titulo i + 1 
                 Datos = {}
                 with open(f"Frame_{i}.txt", "w") as file_forward:
+                    # Parseamos el archivo de entrada
                     Datos = parseo(self.archivo)
                     for ids, seqs in Datos.items():
                         file_forward.write(">{}\n".format(ids))
                         if i <4:
+                            # Procesa los marcos de lectura directos
                             for condon in re.findall(r"(.{3})", seqs[(i-1):]):
                                 file_forward.write(condon + " ")
                             file_forward.write("\n")
                         else:
+                            # Procesa los marcos de lectura inversos
                             seq_str_reverse = seqs[::-1]
                             for codon in re.findall(r"(.{3})", seq_str_reverse[(i-4):]):
                                 file_forward.write(codon + " ")
