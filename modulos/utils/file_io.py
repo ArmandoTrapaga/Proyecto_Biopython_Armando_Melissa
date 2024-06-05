@@ -2,11 +2,11 @@
 Title: 
     file_io.py
 
-Versión: 1.0
+Versiï¿½n: 1.0
 
-Descripción:
-Este módulo provee funcionalidades para leer y escribir secuencias de ADN desde 
-y hacia archivos, asegurando que las secuencias sean válidas y estén bien formateadas.
+Descripciï¿½n:
+Este mï¿½dulo provee funcionalidades para leer y escribir secuencias de ADN desde 
+y hacia archivos, asegurando que las secuencias sean vï¿½lidas y estï¿½n bien formateadas.
 
 Ejemplos de uso disponibles en el bloque principal del modulo.
 
@@ -35,7 +35,7 @@ def read_dna_sequence(filename):
         
     Raises:
         FileNotFoundError: Si el archivo especificado no se encuentra.
-        ValueError: Si el archivo está vacío o contiene caracteres no válidos.
+        ValueError: Si el archivo estï¿½ vacï¿½o o contiene caracteres no vï¿½lidos.
     """
     try:
         with open(filename, 'r') as file:
@@ -56,7 +56,7 @@ def write_dna_sequence(filename):
     Escribe una secuencia de ADN en un archivo de texto.
 
     Args:
-        filename (str): El nombre del archivo donde se escribirá la secuencia.
+        filename (str): El nombre del archivo donde se escribirï¿½ la secuencia.
         sequence (str): La secuencia de ADN a escribir.
         
     Raises:
@@ -80,13 +80,13 @@ def write_dna_sequence(filename):
                 contador_saltos = 0
                 creado.write(linea)
 
-if _name_ == "_main_":
-    # Bloques de prueba para demostrar la funcionalidad del módulo.
+if __name__ == "_main_":
+    # Bloques de prueba para demostrar la funcionalidad del mï¿½dulo.
     
-    # Suponiendo que el archivo "example_dna.txt" contiene la secuencia válida "ATCG"
+    # Suponiendo que el archivo "example_dna.txt" contiene la secuencia vï¿½lida "ATCG"
     try:
         sequence = read_dna_sequence("example_dna.txt")
-        print(f"Secuencia leída correctamente: {sequence}")
+        print(f"Secuencia leï¿½da correctamente: {sequence}")
         
         # Ahora escribir esta secuencia a un nuevo archivo
         write_dna_sequence("output_dna.txt", sequence)
