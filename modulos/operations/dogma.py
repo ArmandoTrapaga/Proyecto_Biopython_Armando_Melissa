@@ -51,7 +51,9 @@ def traduccion(secuencia):
             posicion_actual = inicio
     return peptido
 
- 
-seq = 'ATGCTTCTTCTTTGAATATAATGCTTCTTCTTTGA'
-seq = traduccion(seq)
-print(seq)
+if __name__ == '__main__':
+    seq = 'ATGCTTCTTCTTTGAATATAATGCTTCTTCTTTGA'
+    seq_RNA = traduccion(seq)
+    print(seq_RNA)
+    seq_pep = traduccion(seq)
+    print(seq_pep)
