@@ -4,7 +4,7 @@ Title:
 
 Version: 1.0
 
-Descripción:
+Descripcion:
 Este modulo provee funcionalidades para leer y escribir secuencias de ADN desde 
 y hacia archivos, asegurando que las secuencias sean validas y esten bien formateadas.
 
@@ -56,7 +56,7 @@ def write_dna_sequence(filename):
     Escribe una secuencia de ADN en un archivo de texto.
 
     Args:
-        filename (str): El nombre del archivo donde se escribirá la secuencia.
+        filename (str): El nombre del archivo donde se escribirï¿½ la secuencia.
         sequence (str): La secuencia de ADN a escribir.
         
     Raises:
@@ -86,7 +86,7 @@ if __name__ == "_main_":
     # Suponiendo que el archivo "example_dna.txt" contiene la secuencia valida "ATCG"
     try:
         sequence = read_dna_sequence("example_dna.txt")
-        print(f"Secuencia leída correctamente: {sequence}")
+        print(f"Secuencia leï¿½da correctamente: {sequence}")
         
         # Ahora escribir esta secuencia a un nuevo archivo
         write_dna_sequence("output_dna.txt", sequence)
