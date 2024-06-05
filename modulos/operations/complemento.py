@@ -36,5 +36,9 @@ def complemento_RNA(secuencia):
     return complemento
 
 
-seq = complemento_RNA(seq)
-print(seq)
+
+if __name__ == '__main__':
+    seq = 'ATGCTTCTTCTTTGAATATAATGCTTCTTCTTTGA'
+    seq_com_rna = complemento_RNA(seq)
+    print(seq_com_rna)
+    seq_com_dna = complemento_DNA(seq)
