@@ -11,22 +11,23 @@ parser.add_argument('-t','--tipo', type=str, choices=['R', 'P', 'RP'],default='R
 
 args = parser.parse_args()
 
-if args.tipo == 'R' or args.tipo == 'RP' :
-    for i, frames in enumerate(args.inputs_files):
-        Datos = parseo(frames)
-        with open(f'RNA_{i+1}.txt', 'w') as archivos:
-            for id, seq in Datos.items():
-                archivos.write(">{}\n".format(id))
-                archivos.write("{}\n".format(transcripcion(seq)))
+def procesar_frame(tipo_modif, inputs_files):
+    if tipo_modif == 'R' or tipo_modif == 'RP' :
+        for i, frames in enumerate(inputs_files):
+            Datos = parseo(frames)
+            with open(f'RNA_{i+1}.txt', 'w') as archivos:
+                for id, seq in Datos.items():
+                    archivos.write(">{}\n".format(id))
+                    archivos.write("{}\n".format(transcripcion(seq)))
 
-if args.tipo == 'P' or args.tipo == 'RP':
-    for i, frames in enumerate(args.inputs_files):
-        Datos = parseo(frames)
-        with open(f'Proteinas_{i+1}.txt', 'w') as archivos:
-            for id, seq in Datos.items():
-                archivos.write(">{}\n".format(id))
-                archivos.write("{}\n".format(traduccion(seq)))
+    if tipo_modif == 'P' or tipo_modif == 'RP':
+        for i, frames in enumerate(inputs_files):
+            Datos = parseo(frames)
+            with open(f'Proteinas_{i+1}.txt', 'w') as archivos:
+                for id, seq in Datos.items():
+                    archivos.write(">{}\n".format(id))
+                    archivos.write("{}\n".format(traduccion(seq)))
      
-
+procesar_frame(args.tipo, args.inputs_files)
 
 

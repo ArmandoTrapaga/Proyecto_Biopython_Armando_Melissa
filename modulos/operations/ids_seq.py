@@ -18,3 +18,8 @@ def parseo(file_path):
             Datos[registro_id] = ''.join(secuencia)
     
     return Datos
+
+if __name__ == '__main__':
+    with open('archivo_main_ids_seq.txt', 'w') as file:
+        file.write('>seq1\nATGCTTCTTCTTTGAATATAATGCTTCTTCTTTGA')
+    print(parseo('archivo_main_ids_seq.txt'))
