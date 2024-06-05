@@ -1,6 +1,5 @@
-# Proyecto_Biopython_Armando_Melissa
-
-Este es un script de Python dise帽ado para...
+# FASTA 
+Este es un script de Python dise馻do para 
 
 ## Uso
 
@@ -44,8 +43,8 @@ Este script est谩 disponible bajo la licencia [nombre de la licencia]. Consulte 
 
 ## Como citar
 
-Si utiliza este script en su trabajo, por favor cite: [informaci贸n de citaci贸n].
+Si utiliza este script en su trabajo, por favor cite: [informacion de citacion].
 
 ## Contactenos -=-
 
-Si tiene problemas o preguntas, por favor abra un problema en este repositorio o p贸ngase en contacto con nosotros en: [informaci贸n de contacto].
+Si tiene problemas o preguntas, por favor abra un problema en este repositorio o pongase en contacto con nosotros en: .
