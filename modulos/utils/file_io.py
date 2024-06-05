@@ -2,11 +2,11 @@
 Title: 
     file_io.py
 
-Versiï¿½n: 1.0
+Version: 1.0
 
-Descripciï¿½n:
-Este mï¿½dulo provee funcionalidades para leer y escribir secuencias de ADN desde 
-y hacia archivos, asegurando que las secuencias sean vï¿½lidas y estï¿½n bien formateadas.
+Descripcion:
+Este modulo provee funcionalidades para leer y escribir secuencias de ADN desde 
+y hacia archivos, asegurando que las secuencias sean validas y esten bien formateadas.
 
 Ejemplos de uso disponibles en el bloque principal del modulo.
 
@@ -35,7 +35,7 @@ def read_dna_sequence(filename):
         
     Raises:
         FileNotFoundError: Si el archivo especificado no se encuentra.
-        ValueError: Si el archivo estï¿½ vacï¿½o o contiene caracteres no vï¿½lidos.
+        ValueError: Si el archivo está vacio o contiene caracteres no validos.
     """
     try:
         with open(filename, 'r') as file:
@@ -81,9 +81,9 @@ def write_dna_sequence(filename):
                 creado.write(linea)
 
 if __name__ == "_main_":
-    # Bloques de prueba para demostrar la funcionalidad del mï¿½dulo.
+    # Bloques de prueba para demostrar la funcionalidad del modulo.
     
-    # Suponiendo que el archivo "example_dna.txt" contiene la secuencia vï¿½lida "ATCG"
+    # Suponiendo que el archivo "example_dna.txt" contiene la secuencia valida "ATCG"
     try:
         sequence = read_dna_sequence("example_dna.txt")
         print(f"Secuencia leï¿½da correctamente: {sequence}")
