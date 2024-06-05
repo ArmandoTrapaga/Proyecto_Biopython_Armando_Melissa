@@ -1,31 +1,26 @@
 """
+Title: 
+    file_io.py
 
-file_io.py: Funciones para manejar operaciones de entrada/salida de archivos de ADN.
+Versión: 1.0
 
-Este módulo provee funcionalidades para leer y escribir secuencias de ADN desde y hacia
-archivos, asegurando que las secuencias sean válidas y estén bien formateadas.
+Descripción:
+Este módulo provee funcionalidades para leer y escribir secuencias de ADN desde 
+y hacia archivos, asegurando que las secuencias sean válidas y estén bien formateadas.
+
+Ejemplos de uso disponibles en el bloque principal del modulo.
+
+Usage: 
+    Python file_io.py
 
 Funciones:
     read_dna_sequence(filename) - Lee una secuencia de ADN de un archivo.
     write_dna_sequence(filename, sequence) - Escribe una secuencia de ADN en un archivo.
-    
-Ejemplos de uso estan disponibles en el bloque principal del modulo.
 
-Autores: [Tu Nombre]
-Versión: 1.0
+Imports: 
+    none 
+
 """
-
-# imports
-
-# meta-info
-_author_ = "Tu Nombre"
-_version_ = "1.0"
-
-# global vars
-
-# functions internal
-
-# main functions
 
 def read_dna_sequence(filename):
     """
@@ -59,7 +54,7 @@ def read_dna_sequence(filename):
 def write_dna_sequence(filename):
     """
     Escribe una secuencia de ADN en un archivo de texto.
-    
+
     Args:
         filename (str): El nombre del archivo donde se escribirá la secuencia.
         sequence (str): La secuencia de ADN a escribir.
