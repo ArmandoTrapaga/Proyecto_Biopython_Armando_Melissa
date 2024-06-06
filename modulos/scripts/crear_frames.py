@@ -89,6 +89,7 @@ class frames():
                             for codon in re.findall(r"(.{3})", seq_str_reverse[(i-4):]):
                                 file_forward.write(codon + " ")
                             file_forward.write("\n")
+                return Datos
         except IOError:
             print("IOERROR: No se pudo abrir el archivo. Por favor, asegúrate de que el archivo existe y que has proporcionado la ruta correcta.")        
         
