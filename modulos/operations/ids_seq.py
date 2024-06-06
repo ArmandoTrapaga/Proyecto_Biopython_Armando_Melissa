@@ -5,7 +5,7 @@
         Python ids_seq.py
         
     Descripcion:
-        Este m�dulo proporciona una funcion para parsear archivos en formato FASTA.
+        Este modulo proporciona una funcion para parsear archivos en formato FASTA.
         La funcion lee un archivo FASTA y convierte las secuencias en un diccionario 
         donde las claves son los IDs de los registros y los valores son las secuencias
         de ADN asociadas.
