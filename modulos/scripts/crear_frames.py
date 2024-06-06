@@ -28,6 +28,7 @@ import argparse
 # import sys
 # sys.path.append('C:/Users/phoen/OneDrive/Escritorio/pruebas_bp/carpeta_modulos/operations')
 from modulos.operations.ids_seq import parseo
+
 #============================================================================
 
 # ===========================================================================
@@ -77,6 +78,7 @@ class frames():
                             for codon in re.findall(r"(.{3})", seq_str_reverse[(i-4):]):
                                 file_forward.write(codon + " ")
                             file_forward.write("\n")
+                return Datos
         except IOError:
             print("IOERROR: No se pudo abrir el archivo. Por favor, asegurate de que el archivo existe y que has proporcionado la ruta correcta.")        
         
@@ -84,6 +86,7 @@ class frames():
 #=========================================================================
 #============================Main=========================================
 #Se llama a la funcion
+
 ejemplo = frames(archivo_seq, marcos)
 ejemplo.crear_frames()
 #=========================================================================

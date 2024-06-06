@@ -1,5 +1,4 @@
-
-"""
+'''
 Title:
     modificar_frames
 
@@ -9,18 +8,19 @@ Description:
     ARN y traducidas a proteinas. Dependiendo de los argumentos proporcionados, el script 
     puede realizar solo transcripcion, solo traduccion o ambas.
 
+
 Usage:
     python crear_frames.py <input_file> -n <marcos>
 Args:
     archivo: La ruta del archivo que contiene la cadena de ADN a analizar
 Method:
 1. Se parsea el archivo FASTA dado por el usuario al llamar al programa.
-2. Se llama a la función crear_frames con el archivo parseado y guardado en una variable.
+2. Se llama a la funciï¿½n crear_frames con el archivo parseado y guardado en una variable.
 3. La funcion hace un bucle para crear un archivo donde establece su titulo segun el marco de lectura.
 4. Se abre un bucle anidado que asigna a la variable seq_str_forward la secuencia segun su id en el archivo.
 5. Se abre otro bucle anidado que separa los codones de la cadena cambiando su inicio en i para cambiar el marco.
 6. Se realizan los mismos pasos del 3 al 5 con la diferencia que invierte la cadena para el resto de marcos.
-"""
+'''
 #===========================================================================
 #=================================Imports===================================
 #import sys
