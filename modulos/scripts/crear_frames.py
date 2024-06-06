@@ -10,11 +10,10 @@ separados por espacios segun sea su marco de lectura
 Usage
     python crear_frames.py
 
-ARGUMENTS
-
+Args:
 - archivo: La ruta del archivo que contiene la cadena de ADN a analizar.
 
-Metodo:
+Method:
 1.- Se parsea el archivo fasta dado por el usario al llamar al programa
 2.- Se llama la funcion crear_frames con el archivo parseado y guardado en una variable 
 3.- La funcion hace un for para crear un archivo donde establece su titulo segun el marco de lectura  
@@ -26,8 +25,8 @@ Metodo:
 #=================================Imports===================================
 import re
 import argparse
-import sys
-sys.path.append('C:/Users/phoen/OneDrive/Escritorio/pruebas_bp/carpeta_modulos/operations')
+# import sys
+# sys.path.append('C:/Users/phoen/OneDrive/Escritorio/pruebas_bp/carpeta_modulos/operations')
 from modulos.operations.ids_seq import parseo
 #============================================================================
 
