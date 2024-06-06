@@ -47,6 +47,7 @@ import argparse
 
 #sys.path.append('C:/Users/phoen/OneDrive/Escritorio/pruebas_bp/carpeta_modulos/operations')
 from modulos.operations.ids_seq import parseo
+
 #============================================================================
 
 # ===========================================================================
@@ -97,6 +98,7 @@ class frames():
 #=========================================================================
 #============================Main=========================================
 #Se llama a la funcion
+
 ejemplo = frames(archivo_seq, marcos)
 ejemplo.crear_frames()
 #=========================================================================
