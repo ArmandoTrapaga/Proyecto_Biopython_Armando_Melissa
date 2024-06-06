@@ -3,9 +3,11 @@ Title:
     modificar_frames
 
 Description:
-    Crea un total de 6 archivos evaluando un archivo FASTA, donde cada 
-    archivo contiene los codones de sus secuencias separados por 
-    espacios seg�n sea su marco de lectura.
+    Este script realiza la transcripcion y traduccion de secuencias de ADN contenidas en 
+    archivos FASTA, generando archivos de salida que contienen las secuencias transcritas a 
+    ARN y traducidas a proteinas. Dependiendo de los argumentos proporcionados, el script 
+    puede realizar solo transcripcion, solo traduccion o ambas.
+
 
 Usage:
     python crear_frames.py <input_file> -n <marcos>

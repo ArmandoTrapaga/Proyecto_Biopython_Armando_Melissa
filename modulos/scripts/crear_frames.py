@@ -80,7 +80,7 @@ class frames():
                             file_forward.write("\n")
                 return Datos
         except IOError:
-            print("IOERROR: No se pudo abrir el archivo. Por favor, asegúrate de que el archivo existe y que has proporcionado la ruta correcta.")        
+            print("IOERROR: No se pudo abrir el archivo. Por favor, asegurate de que el archivo existe y que has proporcionado la ruta correcta.")        
         
 
 #=========================================================================
