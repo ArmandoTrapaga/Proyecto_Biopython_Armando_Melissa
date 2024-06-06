@@ -20,15 +20,15 @@ def parseo(file_path):
     
     with open(file_path, 'r') as fasta_file:
         """
-    Lee un archivo FASTA y devuelve un diccionario con los IDs y las secuencias.
+        Lee un archivo FASTA y devuelve un diccionario con los IDs y las secuencias.
 
-    Args:
-        file_path (str): La ruta del archivo FASTA a leer.
+        Args:
+            file_path (str): La ruta del archivo FASTA a leer.
 
-    Returns:
-        dict: Un diccionario donde las claves son los IDs de los registros y 
-        los valores son las secuencias de ADN asociadas.
-    """
+        Returns:
+            dict: Un diccionario donde las claves son los IDs de los registros y 
+            los valores son las secuencias de ADN asociadas.
+        """
         registro_id = None
         secuencia = []
         
